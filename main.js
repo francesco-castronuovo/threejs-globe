@@ -1,5 +1,3 @@
-const util = require('./utils/util')
-
 const vertexShader = require('./shaders/vertex.glsl')
 const fragmentShader = require('./shaders/fragment.glsl')
 const atmosphereVertexShader = require('./shaders/atmospherevertex.glsl')
