@@ -1,7 +1,7 @@
-const vertexShader = require('./shaders/vertex.glsl')
-const fragmentShader = require('./shaders/fragment.glsl')
-const atmosphereVertexShader = require('./shaders/atmospherevertex.glsl')
-const atmosphereFragmentShader = require('./shaders/atmospherefragment.glsl')
+import vertexShader from './shaders/vertex.glsl'
+import fragmentShader from './shaders/fragment.glsl'
+import atmosphereVertexShader from './shaders/atmospherevertex.glsl'
+import atmosphereFragmentShader from './shaders/atmospherefragment.glsl'
 
 const canvasContainer = document.querySelector('.canvas-embed');
 
