@@ -1,3 +1,8 @@
+import vertexShader from './shaders/vertex.glsl'
+import fragmentShader from './shaders/fragment.glsl'
+import atmosphereVertexShader from './shaders/atmospherevertex.glsl'
+import atmosphereFragmentShader from './shaders/atmospherefragment.glsl'
+
 const canvasContainer = document.querySelector('.canvas-embed');
 
 const scene = new THREE.Scene();
@@ -19,8 +24,8 @@ renderer.setPixelRatio(window.devicePixelRatio);
 const sphere = new THREE.Mesh(
   new THREE.SphereGeometry(5, 50, 50),
   new THREE.ShaderMaterial({
-    vertexShader: document.getElementById("vertexShader").textContent,
-    fragmentShader: document.getElementById("fragmentShader").textContent,
+    vertexShader: vertexShader,
+    fragmentShader: fragmentShader,
     uniforms: {
       globeTexture: {
         value: new THREE.TextureLoader().load('https://uploads-ssl.webflow.com/633b2986225baf6d7bd77b86/633b3828238f512fecf4c991_earth.jpg')
@@ -32,8 +37,8 @@ const sphere = new THREE.Mesh(
 const atmosphere = new THREE.Mesh(
   new THREE.SphereGeometry(5, 50, 50),
   new THREE.ShaderMaterial({
-    vertexShader: document.getElementById("atmosphereVertexShader").textContent,
-    fragmentShader: document.getElementById("atmosphereFragmentShader").textContent,
+    vertexShader: atmosphereVertexShader,
+    fragmentShader: atmosphereFragmentShader,
     blending: THREE.AdditiveBlending,
     side: THREE.BackSide
   })
